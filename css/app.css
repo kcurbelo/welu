@@ -1,24 +1,80 @@
-.red {
-	background-color: red;
+body {
+  background-image: url('../img/pattern.jpg');
 }
 
-.width {
+.banner{
 	width: 100%;
-	background-color: blue;
+	/*height: 113px;*/	
+	margin:2% 0;
+}
+
+h2 {
+  color: #6d6e70;
+}
+
+.register {
+	width: 100%;
+	max-height: 355px;
 }
 
 .top-bar {
-	background-color: green;
+	background-color: #2f558f;
+  /*background-color: rgba(47, 85, 143, 0.6);*/
 }
 
 .contain-to-grid {
-	background-color: green;
+	background-color: #2f558f;
 }
 
 .top-bar-section ul li {
-  background-color: green;
+  background-color: #2f558f;
 }
 
-.blue {
-	background-color: blue;
+.maxWidth {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.buttonz {
+	max-width: 300px;
+	margin: 4% auto 0 auto;
+}
+
+.locationIcons {
+	width: 142px;
+	height: 106px;
+}
+
+.buttonColor {
+	background-color: #2f558f;
+}
+
+.top-bar-section ul li > a.button {
+  font-size: 0.8125rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+}
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098d1;
+  color: white;
 }
