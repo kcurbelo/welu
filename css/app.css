@@ -2,14 +2,35 @@ body {
   background-image: url('../img/pattern.jpg');
 }
 
+h2, h3, h5, p {
+  color: #6d6e70;
+}
+
+[class*="block-grid-"] > li {
+  display: block;
+  float: left;
+  height: auto;
+  padding: 0 0.625rem .1rem;
+}
+
+/*Changes color of the top left title text*/
+.top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
+  font-size: 1.0625rem;
+  line-height: 2.8125rem;
+  margin: 0;
+  background-color: #2f558f;
+  color: white;
+}
+
+.weluIcon {
+  width: 45px;
+  height: 25px;
+}
+
 .banner{
 	width: 100%;
 	/*height: 113px;*/	
 	margin:2% 0;
-}
-
-h2 {
-  color: #6d6e70;
 }
 
 .register {
@@ -17,17 +38,9 @@ h2 {
 	max-height: 355px;
 }
 
-.top-bar {
-	background-color: #2f558f;
-  /*background-color: rgba(47, 85, 143, 0.6);*/
-}
-
-.contain-to-grid {
-	background-color: #2f558f;
-}
-
-.top-bar-section ul li {
-  background-color: #2f558f;
+.registerButton{
+  max-width: 300px;
+  margin: 4% auto 0 auto;
 }
 
 .maxWidth {
@@ -35,14 +48,14 @@ h2 {
 	margin: 0 auto;
 }
 
-.buttonz {
-	max-width: 300px;
-	margin: 4% auto 0 auto;
-}
-
 .locationIcons {
 	width: 142px;
 	height: 106px;
+}
+
+.locationIconsBig {
+  width: 250px;
+  height: 166px;
 }
 
 .buttonColor {
@@ -58,23 +71,139 @@ h2 {
   color: #FFFFFF;
 }
 
-/* Fade */
-.hvr-fade {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: color, background-color;
-  transition-property: color, background-color;
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: #2f558f;
+  line-height: 2.8125rem;
+  padding: 0 0.9375rem;
 }
-.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #2098d1;
-  color: white;
+
+.top-bar {
+    background: #2f558f;
 }
+
+/*Changes the Top Bar link styles*/
+.top-bar-section li a:not(.button) {
+    background: #2f558f !important;   
+}
+
+.top-bar-section li a:not(.button):hover {
+    background: #294a7c !important;   
+}
+
+.top-bar-section ul li.active > a {
+    background: #305893 !important;   
+}
+
+.top-bar-section ul li.active > a:hover {
+    background: #294a7c !important;   
+}
+
+/*Changes the background color of the topbar when resized*/
+.top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
+  color: #FFFFFF;
+  display: block;
+  font-weight: normal;
+  padding: 0 0.9375rem;
+  width: 75%;
+  background-color: #2f558f;
+}
+
+.top-bar .toggle-topbar.menu-icon a {
+  color: #FFFFFF;
+  height: 34px;
+  line-height: 33px;
+  padding: 0 2.5rem 0 0.9375rem;
+  position: relative;
+  background-color: #2f558f;
+}
+
+.top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
+  font-size: 1.0625rem;
+  line-height: 2.8125rem;
+  margin: 0;
+  background-color: #2f558f;
+}
+
+/*Colors the hamburger menu when resized down*/
+.top-bar.expanded .toggle-topbar a span::after {
+  box-shadow: 0 0 0 1px white, 
+              0 7px 0 1px white, 
+              0 14px 0 1px white;
+}
+
+/*Social Media Icons*/
+.socialIcons {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.button:hover, 
+.button:focus {
+  background-color: #294a7c;
+}
+
+.forAssistance {
+  color: #6d6e70
+}
+/*=================================================*/
+/*Sponsors*/
+/*=================================================*/
+
+.sponsorText {
+  text-align: center;
+}
+
+/*=================================================*/
+/*Agenda*/
+/*=================================================*/
+
+/*Boxes for agenda*/
+.agendaBox {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.agendaBox:hover, .agendaBox:focus {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .95);
+}
+
+
+/* Media Queries ================================================================================*/
+
+/*Small screens*/
+@media only screen { 
+  .weluIcon {
+  width: 30px;
+  height: 30px;
+  }
+} /* Define mobile styles */
+@media only screen and (max-width: 40em) { 
+  .weluIcon {
+  width: 30px;
+  height: 30px;
+  }
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+
+@media only screen and (min-width: 40.0625em) {
+  .top-bar {
+    background: #2f558f;
+  }
+}
+/*Large screens*/
+@media only screen and (min-width: 64.063em) { 
+  .top-bar {
+      background: #2f558f;
+      margin: 0 auto;
+      width: 75%;
+  }
+} /* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { 
+  .top-bar {
+      background: #2f558f;
+      margin: 0 auto;
+      width: 75%;
+  }
+} /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
