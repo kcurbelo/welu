@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="css/app.css">
   <script src="js/vendor/modernizr.js"></script>
   <meta name="viewport" content="width=device-width" />
+
+	<script type="text/javascript">
+
+	//   var _gaq = _gaq || [];
+	//   _gaq.push(['_setAccount', 'UA-63986300-1']);
+	//   _gaq.push(['_trackPageview']);
+
+	//   (function() {
+	//     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	//     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	//     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	//   })();
+
+	// </script>
+
 </head>
 
 <body>
@@ -16,7 +31,7 @@
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="http://www.employersgroup.com/uploadedFiles/Site/Rotating_Banner/EG_WELU_AdvReg.pdf"><p>WELU2015</p></a></h1>
+        <h1><a href="index.html"><p>WELU2015</p></a></h1>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -25,11 +40,11 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li><a href="#">Need assistance? Call 800-748-8484</a></li>     
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Sponsors</a></li>
-        <li><a href="#">Agenda</a></li>    
-        <li><a href="#">Location</a></li>
+        <li><a href="tel:800-748-8484" id="assistanceLink">Need assistance? Call 800-748-8484</a></li>     
+        <li><a href="register.html" id="registerPage">Register</a></li>
+        <li><a href="sponsors.html" id="sponsorPage">Sponsors</a></li>
+        <li><a href="agenda.html" id="agendaPage">Agenda</a></li>    
+        <li><a href="locations.html" id="locationsPage">Locations</a></li>
       </ul>
     </section>
   </nav>
@@ -38,7 +53,7 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <img src="img/banner.png" alt="Logo" class="banner">
+    <a href="index.html"><img src="img/banner.png" alt="Logo" class="banner"></a>
   </div>
 </div>
 
@@ -47,13 +62,13 @@
   <div class="large-8 columns ">
     <h3>Register</h3>
     <hr />
-    <img src="img/mainBanner.png" alt="Logo" class="register">
+    <a href="register.html"><img src="img/mainBanner.png" alt="Logo" class="register" id="registerBannerHome" onClick="ga('send', 'event', 'Banner Link', 'click', 'Main register banner', 1);"></a>
     <div class="registerButton">
-      <a href="#" class="button expand buttonColor">Register now</a>
+      <a href="register.html" class="button expand buttonColor" id="registerButtonHome">Register now</a>
     </div> 
-    <img src="img/sponsorBanner.png" alt="Logo" class="register">
+    <img src="img/sponsorBanner.png" alt="Logo" class="register" id="sponsorBannerHome">
     <div class="registerButton">
-      <a href="#" class="button expand buttonColor">Become a sponsor</a>
+      <a href="sponsors.html" class="button expand buttonColor" id="sponsorButtonHome">Become a sponsor</a>
     </div>     
   </div>
   <div class="large-4 columns">
@@ -73,7 +88,7 @@
       <li class="locPad"><img src="img/airportmarriot.jpg" alt="Logo" class="locationIcons">
       <p>November 5, 2015 Burbank Airport Marriott</p></li>
     </ul>
-    <a href="#" class="button expand buttonColor">View Locations</a>
+    <a href="locations.html" class="button expand buttonColor" id="locationsButtonHome">View Locations</a>
     <p class="forAssistance">For assistance: training@employersgroup.com</p>
   </div>
 </div>
@@ -93,12 +108,14 @@
   </div>
 </div>
  -->
-  <div class="large-3 columns large-offset-5">
+<div class="row">
+  <div class="large-2 columns large-offset-5">
     <!-- <p>Connect with us:</p> -->
-    <img src="img/linkedin.svg" alt="Logo" class="socialIcons">
-    <img src="img/facebook.svg" alt="Logo" class="socialIcons">
-    <img src="img/twitter.svg" alt="Logo" class="socialIcons">
+    <a href="https://www.linkedin.com/company/employers-group"><img src="img/linkedin.svg" alt="EG Linkedin Link" class="socialIcons" id="linkedinLink"></a>
+    <a href="https://www.facebook.com/EmployersGroup"><img src="img/facebook.svg" alt="EG Facebook Link" class="socialIcons" id="facebookLink"></a>
+    <a href="https://twitter.com/employersgroup"><img src="img/twitter.svg" alt="EG Twitter Link" class="socialIcons" id="twitterLink"></a>
   </div>
+</div>
 
 
 
@@ -109,7 +126,18 @@
   <script>
     $(document).foundation();
   </script>
+    <!--============================ Google analytics code ===========================-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-63986300-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+
+  </script>
 
 </body>
 </html>

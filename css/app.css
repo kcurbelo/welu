@@ -138,6 +138,14 @@ h2, h3, h5, p {
   margin-bottom: 15px;
 }
 
+.iconCenter {
+  margin: 0 auto;
+}
+
+.aaa {
+  width: 100%
+}
+
 .button:hover, 
 .button:focus {
   background-color: #294a7c;
@@ -153,6 +161,12 @@ h2, h3, h5, p {
 .sponsorText {
   text-align: center;
 }
+
+.sponsorTextSmall {
+  text-align: center;
+  font-size: .8em;
+}
+
 
 /*=================================================*/
 /*Agenda*/
