@@ -2,7 +2,10 @@ body {
   background-image: url('../img/pattern.jpg');
 }
 
-h2, h3, h5, p {
+h2, h3, h4, h5, p {
+  color: #6d6e70;
+}
+li {
   color: #6d6e70;
 }
 
@@ -178,11 +181,9 @@ h2, h3, h5, p {
   background-color: rgba(255, 255, 255, .8);
 }
 
-.agendaBox:hover, .agendaBox:focus {
-  padding: 10px;
-  background-color: rgba(255, 255, 255, .95);
+.agendaBox, p {
+  margin-bottom: 2px;
 }
-
 
 /* Media Queries ================================================================================*/
 
@@ -198,6 +199,7 @@ h2, h3, h5, p {
   width: 30px;
   height: 30px;
   }
+
 } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
 
@@ -213,6 +215,7 @@ h2, h3, h5, p {
       margin: 0 auto;
       width: 75%;
   }
+
 } /* min-width 1025px, large screens */
 @media only screen and (min-width: 64.063em) and (max-width: 90em) { 
   .top-bar {
@@ -220,4 +223,8 @@ h2, h3, h5, p {
       margin: 0 auto;
       width: 75%;
   }
+  .mobileAgenda {
+  display: none;
+}
+
 } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
